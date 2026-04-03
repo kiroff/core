@@ -1,0 +1,51 @@
+package org.kiroff.kafka.events;
+
+import java.math.BigDecimal;
+
+public class WithdrawalRequestedEvent
+{
+    private String senderId;
+    private String recipientId;
+    private BigDecimal amount;
+
+    public WithdrawalRequestedEvent()
+    {
+    }
+
+    public WithdrawalRequestedEvent(String senderId, String recipientId, BigDecimal amount)
+    {
+        this.senderId = senderId;
+        this.recipientId = recipientId;
+        this.amount = amount;
+    }
+
+    public BigDecimal getAmount()
+    {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount)
+    {
+        this.amount = amount;
+    }
+
+    public String getRecipientId()
+    {
+        return recipientId;
+    }
+
+    public void setRecipientId(String recipientId)
+    {
+        this.recipientId = recipientId;
+    }
+
+    public String getSenderId()
+    {
+        return senderId;
+    }
+
+    public void setSenderId(String senderId)
+    {
+        this.senderId = senderId;
+    }
+}
